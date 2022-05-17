@@ -1,6 +1,7 @@
 # rainbow_app
 
 A new Flutter project.
+(https://github.com/IvannaKozak/rainbow_app/blob/master/rainbow_app.png)
 
 ## Getting Started
 
