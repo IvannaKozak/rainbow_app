@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:audioplayers/audioplayers.dart';
 
 class MainPage extends StatefulWidget {
   @override
@@ -6,6 +7,11 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
+  void playSound() {
+    final player = AudioCache();
+    player.play('drum_sound.wav');
+  }
+
   Color mainColor =
       Color.fromARGB(255, 238, 211, 234); //Color.fromARGB(255, 215, 209, 150);
   bool change1Color = false;
@@ -30,6 +36,7 @@ class _MainPageState extends State<MainPage> {
               text: 'Red',
               colour: change1Color == true ? Colors.red : mainColor,
               onClicked: () {
+                playSound();
                 setState(() {
                   change1Color = true;
                 });
@@ -40,6 +47,7 @@ class _MainPageState extends State<MainPage> {
               text: 'Orange',
               colour: change2Color == true ? Colors.orange : mainColor,
               onClicked: () {
+                playSound();
                 setState(() {
                   change2Color = true;
                 });
@@ -50,6 +58,7 @@ class _MainPageState extends State<MainPage> {
               text: 'Yellow',
               colour: change3Color == true ? Colors.yellow : mainColor,
               onClicked: () {
+                playSound();
                 setState(() {
                   change3Color = true;
                 });
@@ -62,6 +71,7 @@ class _MainPageState extends State<MainPage> {
                   ? Color.fromARGB(255, 35, 186, 40)
                   : mainColor,
               onClicked: () {
+                playSound();
                 setState(() {
                   change4Color = true;
                 });
@@ -72,6 +82,7 @@ class _MainPageState extends State<MainPage> {
               text: 'Blue',
               colour: change5Color == true ? Colors.blue : mainColor,
               onClicked: () {
+                playSound();
                 setState(() {
                   change5Color = true;
                 });
@@ -82,6 +93,7 @@ class _MainPageState extends State<MainPage> {
               text: 'Indigo',
               colour: change6Color == true ? Colors.indigo : mainColor,
               onClicked: () {
+                playSound();
                 setState(() {
                   change6Color = true;
                 });
@@ -92,6 +104,7 @@ class _MainPageState extends State<MainPage> {
               text: 'Violet',
               colour: change7Color == true ? Colors.purple : mainColor,
               onClicked: () {
+                playSound();
                 setState(() {
                   change7Color = true;
                 });
